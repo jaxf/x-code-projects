@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Properties
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+    // View Code
+        Text("Hello, world!").padding()
     }
+    // Methods
 }
-
 struct ContentView_Previews: PreviewProvider {
+    // Properties
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .previewDevice("iPhone 11")
+                .preferredColorScheme(.dark)
+            ContentView()
+                .preferredColorScheme(.light)
+        }
     }
 }
