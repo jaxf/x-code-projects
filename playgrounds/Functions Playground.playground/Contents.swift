@@ -12,4 +12,3 @@ func myFunc(_ a:Int, _ b:Int = 0) -> Int {
 }
 print(myFunc(10, 20))
 
-myFunc
