@@ -9,60 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-        Image("background")
         
-        HStack {
-            Image("card3")
-                .padding(.leading, 25.0)
-            Spacer()
-            Image("card4")
-                .padding(.trailing, 25.0)
-        }
-        .padding(.bottom, 140.0)
-            VStack {
-                Image("dealbutton")
-                    .padding(.top, 500.0)
-            }
-        VStack {
-            Image("logo")
-                .padding(.top, 75.0)
-            Spacer()
-            }
-        .padding(.bottom, 100.0)
+        ZStack {
+            
+            Image("background").ignoresSafeArea()
             
             VStack {
                 Spacer()
-                HStack {
-                    Spacer()
-                    Text("0")
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 100.0)
-                    Spacer()
-                    Text("0")
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 100.0)
-                       
-                    Spacer()
-                }
-            }
-            VStack {
+                Image("logo")
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("Player")
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 100.0)
+                    Image("card2")
                     Spacer()
-                    Text("CPU")
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 100.0)
-                       
+                    Image("card3")
                     Spacer()
                 }
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                }
+                Spacer()
             }
-            .padding(.bottom, 30.0)
+            
         }
+        
     }
 }
 
